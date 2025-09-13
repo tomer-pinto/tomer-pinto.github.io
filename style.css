@@ -1,24 +1,157 @@
-.navbar {
-  border-bottom: 1px solid white;
+/* =============== Base / Resets =============== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  color: #111827;
+  background-color: #ffffff;
+}
+
+/* =============== Navbar =============== */
+.navbar {
+  border-bottom: 1px solid #374151;
+}
+
+/* =============== Cards / Projects =============== */
+.card-link:focus-visible .card,
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Shiny effect wrapper */
+.project-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Shine sweep */
+.project-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.card:hover .project-img::after,
+.card-link:focus-visible .project-img::after {
+  animation: shine 1.5s forwards;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .card-link:focus-visible .card {
+    transition: none;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover .project-img::after,
+  .card-link:focus-visible .project-img::after {
+    animation: none;
+  }
+}
+
+/* =============== Section Headings =============== */
+section h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #e5e7eb;
+  margin: 10px auto 0;
+}
+
+/* =============== Text =============== */
+#about p,
+#contact p {
+  line-height: 1.65;
+  color: #374151;
+}
+
+/* =============== Contact Icons =============== */
 .contact-icons i {
   color: #6B7280;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.contact-icons a:hover i {
-  color: #111827;
-  transform: scale(1.2);
+.icon.email:hover i,
+.icon.email:focus-visible i {
+  color: #EA4335;
+  transform: scale(1.1);
 }
 
-.card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
+.icon.linkedin:hover i,
+.icon.linkedin:focus-visible i {
+  color: #0A66C2;
+  transform: scale(1.1);
 }
 
-.card-body {
-  padding: 1rem;
+.icon.github:hover i,
+.icon.github:focus-visible i {
+  color: #333;
+  transform: scale(1.1);
+}
+
+/* =============== Light sections divider =============== */
+section.bg-light {
+  border-top: 1px solid #e5e7eb;
+}
+
+/* =============== Footer =============== */
+footer {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  border-top: 1px solid #374151;
+  line-height: 1.5;
+}
+
+/* =============== Focus outlines (a11y) =============== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #0A66C2;
+  outline-offset: 2px;
 }

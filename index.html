@@ -1,141 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Tomer Pinto - Software Developer & Data Analyst. Projects in Python, SQL, Power BI, Data Science.">
-  <meta name="keywords" content="Tomer Pinto, Portfolio, Software Developer, Data Analyst, Python, SQL, Power BI, Data Science">
-  <meta property="og:title" content="Tomer Pinto | Portfolio">
-  <meta property="og:description" content="Software Developer & Data Analyst | Python • SQL • Power BI • Data Science">
-  <meta property="og:image" content="images/portfolio_preview.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tomer-pinto.github.io/">
+
+  <!-- Primary SEO -->
   <title>Tomer Pinto | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Tomer Pinto — Software Developer & Data Analyst. Experienced in Python, SQL, Power BI, and Machine Learning." />
+  <link rel="canonical" href="https://tomer-pinto.github.io/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Tomer Pinto | Portfolio" />
+  <meta property="og:description"
+    content="Software Developer & Data Analyst with experience in Python, SQL, Power BI, and Machine Learning." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tomer-pinto.github.io/" />
+  <meta property="og:image" content="images/portfolio_preview.png?v=2" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tomer Pinto",
+    "jobTitle": "Software Developer & Data Analyst",
+    "url": "https://tomer-pinto.github.io/",
+    "sameAs": [
+      "https://github.com/tomer-pinto",
+      "https://www.linkedin.com/in/tomerpinto"
+    ]
+  }
+  </script>
+
+  <!-- Icons -->
   <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <!-- CSS -->
   <link href="style.css" rel="stylesheet" />
+
+  <!-- Frameworks -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-    <a class="navbar-brand" href="#">Tomer Pinto</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#" aria-label="Home">Tomer Pinto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <!-- Header -->
+  <!-- Header / Hero -->
   <header class="bg-dark text-white text-center py-5">
-    <h1 class="fw-bold mb-3">Software Developer & Data Analyst</h1>
-    <p class="lead fst-italic text-white">
-      Python • SQL • Power BI • Data Science
-    </p>
+    <div class="container">
+      <h1 class="fw-bold mb-3">Tomer Pinto</h1>
+      <h2 class="h4 mb-3">Software Developer & Data Analyst</h2>
+      <p class="lead text-white-50">Python • SQL • Power BI • Data Science</p>
+    </div>
   </header>
 
   <!-- Projects -->
-  <section id="projects" class="container py-5">
-    <h2 class="text-center mb-4">Projects</h2>
-    <div class="row justify-content-center">
+  <section id="projects" class="py-5" aria-labelledby="projects-title" data-aos="fade-up">
+    <div class="container">
+      <h2 id="projects-title" class="text-center mb-4">Projects</h2>
 
-      <!-- Weather Data Analysis Project -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="https://colab.research.google.com/drive/1MvvogiVW--x4EPU88Jm782-PeiOEFfAd" 
-          class="text-decoration-none text-dark" target="_blank" rel="noopener noreferrer">
-          <div class="card h-100">
-            <picture>
-              <source srcset="images/weather_data_analysis_image.webp" type="image/webp">
-              <img src="images/weather_data_analysis_image.png" class="card-img-top project-img" alt="Weather Analysis Screenshot">
-            </picture>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Weather Data Analysis</h5>
-              <p class="card-text">
-                A Python project developed in Google Colab that collects and analyzes weather data from 1,000 cities using the OpenWeatherMap API. After cleaning the data, key metrics were explored through visualizations to uncover patterns, trends, and climate extremes.
-              </p>
+      <div class="row justify-content-center">
+        <!-- Weather Data Analysis Project -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://colab.research.google.com/drive/1MvvogiVW--x4EPU88Jm782-PeiOEFfAd"
+            class="text-decoration-none text-dark card-link" target="_blank" rel="noopener noreferrer"
+            aria-label="Open Weather Data Analysis Project in a new tab">
+            <div class="card h-100">
+              <div class="project-img">
+                <picture>
+                  <source srcset="images/weather_data_analysis_image.webp" type="image/webp">
+                  <img src="images/weather_data_analysis_image.png" class="card-img-top"
+                    alt="Weather data analysis project picture" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Weather Data Analysis</h5>
+                <p class="card-text">
+                  A <strong>Python</strong> project developed in <strong>Google Colab</strong> that collects and
+                  analyzes weather data
+                  from <strong>1,000 cities</strong> using the <strong>OpenWeatherMap API</strong>. After cleaning the
+                  data,
+                  key metrics were visualized to uncover <strong>patterns, trends, and climate extremes</strong>.
+                </p>
+                <p class="text-muted mt-auto small">
+                  <strong>Technologies:</strong> Python, Pandas, Matplotlib, OpenWeatherMap API, Google Colab
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
+          </a>
+        </div>
 
-      <!-- Academic Management System Project -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="https://github.com/tomermichaelpinto/Academic_Management_System_Advanced_Python_Final_Project" 
-          class="text-decoration-none text-dark" target="_blank" rel="noopener noreferrer">
-          <div class="card h-100">
-            <picture>
-              <source srcset="images/academic_management_system_image.webp" type="image/webp">
-              <img src="images/academic_management_system_image.png" class="card-img-top project-img" alt="Academic Management System Image">
-            </picture>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Academic Management System</h5>
-              <p class="card-text">
-                A multi-layered academic management system built in Python, applying OOP and MySQL. 
-                Supports role-based access for manager, teachers, students, parents, and general workers with modules for courses, enrollments, payments, and maintenance tracking.
-              </p>
+        <!-- Academic Management System Project -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://github.com/tomermichaelpinto/Academic_Management_System_Advanced_Python_Final_Project"
+            class="text-decoration-none text-dark card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card h-100">
+              <div class="project-img">
+                <picture>
+                  <source srcset="images/academic_management_system_image.webp" type="image/webp">
+                  <img src="images/academic_management_system_image.png" class="card-img-top"
+                    alt="Academic management system project picture" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Academic Management System</h5>
+                <p class="card-text">
+                  A <strong>multi-layered system</strong> built in <strong>Python</strong> with <strong>MySQL</strong>,
+                  applying
+                  <strong>OOP</strong> principles. Supports <strong>role-based access</strong> for managers, teachers,
+                  students, parents, and staff,
+                  with modules for <strong>courses, enrollments, payments, and maintenance tracking</strong>.
+                </p>
+                <p class="text-muted mt-auto small">
+                  <strong>Technologies:</strong> Python, MySQL <br>
+                  <strong>Approach:</strong> OOP, 3-Layer Architecture
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
+          </a>
+        </div>
 
-      <!-- Stroke Detection Dashboard Project -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <a href="https://stroke-detection-dashboard.streamlit.app/" 
-          class="text-decoration-none text-dark" target="_blank" rel="noopener noreferrer">
-          <div class="card h-100">
-            <picture>
-              <source srcset="images/stroke_detection_dashboard_image.webp" type="image/webp">
-              <img src="images/stroke_detection_dashboard_image.png" class="card-img-top project-img" alt="Stroke Detection Dashboard Image">
-            </picture>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Stroke Detection Dashboard</h5>
-              <p class="card-text">
-                An end-to-end deep learning project for preliminary stroke detection, resulting in an interactive Streamlit dashboard. Trained and evaluated multiple CNNs on a challenging, imbalanced public dataset, creating a final Ensemble model with 88% accuracy.
-              </p>
+        <!-- Stroke Detection Dashboard Project -->
+        <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://stroke-detection-dashboard.streamlit.app/" class="text-decoration-none text-dark card-link"
+            target="_blank" rel="noopener noreferrer" aria-label="Open Stroke Detection Dashboard in a new tab">
+            <div class="card h-100">
+              <div class="project-img">
+                <picture>
+                  <source srcset="images/stroke_detection_dashboard_image.webp" type="image/webp">
+                  <img src="images/stroke_detection_dashboard_image.png" class="card-img-top"
+                    alt="Stroke detection dashboard project picture" loading="lazy" decoding="async">
+                </picture>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Stroke Detection Dashboard</h5>
+                <p class="card-text">
+                  An <strong>end-to-end deep learning project</strong> for preliminary <strong>stroke
+                    detection</strong>,
+                  resulting in an interactive <strong>Streamlit dashboard</strong>. Trained and evaluated
+                  multiple <strong>CNN models</strong> on an imbalanced dataset, with a final
+                  <strong>Ensemble model</strong> reaching <strong>88% accuracy</strong>.
+                  Followed the <strong>CRISP-DM</strong> methodology for a robust process.
+                </p>
+                <p class="text-muted mt-auto small">
+                  <strong>Technologies:</strong> Python, TensorFlow/Keras, Pandas, NumPy, OpenCV, Albumentations,
+                  Streamlit <br>
+                  <strong>Approach:</strong> CNN, Ensemble Learning, CRISP-DM
+                </p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- About Me -->
-  <section id="about" class="bg-light py-5">
-    <div class="container ms-2">
-      <h2>About Me</h2>
+  <!-- Skills -->
+  <section id="skills" class="bg-light py-5" aria-labelledby="skills-title" data-aos="fade-right">
+    <div class="container text-center">
+      <h2 id="skills-title" class="mb-4">Skills</h2>
+      <p class="mb-4">Core technologies and tools I work with:</p>
+
+      <h4 class="h5">Programming</h4>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <img src="https://img.shields.io/badge/Code-Python-blue?logo=python&logoColor=blue" alt="Python" loading="lazy"
+          decoding="async">
+        <img src="https://img.shields.io/badge/Database-SQL-lightgrey?logo=database&logoColor=black" alt="SQL"
+          loading="lazy" decoding="async">
+      </div>
+
+      <h4 class="h5">Data & Visualization</h4>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <img src="https://img.shields.io/badge/Visualization-Power%20BI-F2C811?logo=powerbi&logoColor=black"
+          alt="Power BI" loading="lazy" decoding="async">
+        <img src="https://img.shields.io/badge/ML-TensorFlow%20|%20Keras-orange?logo=tensorflow&logoColor=orange"
+          alt="TensorFlow/Keras" loading="lazy" decoding="async">
+        <img src="https://img.shields.io/badge/Data%20Viz-Matplotlib-blueviolet?logo=plotly&logoColor=white"
+          alt="Matplotlib" loading="lazy" decoding="async">
+      </div>
+
+      <h4 class="h5">Tools</h4>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <img src="https://img.shields.io/badge/App-Streamlit-FF4B4B?logo=streamlit&logoColor=red" alt="Streamlit"
+          loading="lazy" decoding="async">
+        <img src="https://img.shields.io/badge/Env-Google%20Colab-F9AB00?logo=googlecolab&logoColor=yellow"
+          alt="Google Colab" loading="lazy" decoding="async">
+        <img src="https://img.shields.io/badge/Version%20Control-Git-black?logo=git&logoColor=red" alt="Git"
+          loading="lazy" decoding="async">
+      </div>
+
+      <h4 class="h5">Web</h4>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <img
+          src="https://img.shields.io/badge/Web-HTML%20|%20CSS%20|%20Bootstrap-informational?logo=html5&logoColor=orange"
+          alt="HTML, CSS, Bootstrap" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5" aria-labelledby="about-title" data-aos="fade-left">
+    <div class="container">
+      <h2 id="about-title" class="text-center mb-4">About Me</h2>
       <p>
-        I am a B.Sc. graduate in Information Systems with a specialization in Data Science. 
-        My background combines software development, data analysis, and business intelligence, with strong skills in Python, SQL, and Power BI. 
-        I also have experience in machine learning and predictive modeling using TensorFlow (Keras API), in data visualization with Power BI and Matplotlib, and in building interactive applications with Streamlit. 
-        Alongside these, I am familiar with web technologies such as HTML, CSS, Bootstrap, and JavaScript. 
-        I enjoy working across the full process – from data collection and preparation, through modeling and evaluation, to visualization and deployment – turning complex data into clear, actionable insights and practical solutions.
+        I am a B.Sc. graduate in Information Systems with a specialization in Data Science.
+        My background brings together <strong>software development</strong>, <strong>data analysis</strong>,
+        and <strong>business intelligence</strong>, with proven skills in <strong>Python</strong>,
+        <strong>SQL</strong>, and <strong>Power BI</strong>.
+      </p>
+      <p>
+        Through academic and personal projects, I gained hands-on experience in
+        <strong>machine learning</strong> and <strong>predictive modeling</strong> using TensorFlow (Keras API),
+        <strong>data visualization</strong> with Power BI and Matplotlib, and building interactive applications
+        with <strong>Streamlit</strong>. Alongside these, I am also familiar with web technologies
+        such as HTML, CSS, Bootstrap, and JavaScript.
+      </p>
+      <p>
+        I enjoy working across the full data lifecycle – from <strong>collection and preparation</strong>,
+        through <strong>modeling and evaluation</strong>, to <strong>visualization and deployment</strong>.
+        My focus is on turning complex data into clear, actionable insights and practical solutions.
       </p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container ms-2">
-      <h2 class="mb-3">Contact</h2>
+  <section id="contact" class="bg-light py-5" aria-labelledby="contact-title" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 id="contact-title" class="mb-4">Contact</h2>
       <p class="mb-3">Let’s connect! Feel free to reach out to me via:</p>
-      <div class="contact-icons ms-2">
-        <a href="mailto:tomermichaelpinto@gmail.com" aria-label="Email Tomer Pinto" target="_blank" class="text-decoration-none me-4">
-          <i class="fas fa-envelope fa-lg"></i>
+      <div class="contact-icons">
+        <a href="mailto:tomerpintoofficial@gmail.com" aria-label="Email Tomer Pinto"
+          class="text-decoration-none me-4 icon email">
+          <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
         </a>
-        <a href="https://www.linkedin.com/in/tomerpinto" aria-label="LinkedIn Profile" target="_blank" class="text-decoration-none me-4">
-          <i class="fab fa-linkedin fa-lg"></i>
+        <a href="https://www.linkedin.com/in/tomerpinto" aria-label="LinkedIn Profile" target="_blank"
+          rel="noopener noreferrer" class="text-decoration-none me-4 icon linkedin">
+          <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/tomer-pinto" aria-label="GitHub Profile" target="_blank" class="text-decoration-none">
-          <i class="fab fa-github fa-lg"></i>
+        <a href="https://github.com/tomer-pinto" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"
+          class="text-decoration-none icon github">
+          <i class="fab fa-github fa-lg" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -143,10 +271,20 @@
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 d-flex justify-content-center align-items-center">
-    <img src="images/favicon.png" alt="Tomer Pinto Logo" width="24" height="24" class="me-2">
+    <img src="images/favicon.png" alt="Tomer Pinto Logo" width="24" height="24" class="me-2" loading="lazy"
+      decoding="async">
     <span>© 2025 Tomer Pinto. All rights reserved.</span>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+  </script>
 </body>
+
 </html>
